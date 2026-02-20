@@ -79,6 +79,24 @@ export const stories = [
     },
   },
 
+  {
+    id: 'container',
+    title: 'Container',
+    category: 'Layout',
+    description: 'Main content wrapper with max-width 800px, centered layout.',
+    render: (c) => {
+      c.innerHTML = `
+        <div class="container" style="background:rgba(233,69,96,0.05);border:1px dashed var(--accent);padding:16px">
+          <p style="color:var(--text-secondary);font-size:0.85rem;text-align:center">.container — max-width: 800px, margin: 0 auto, padding: 16px</p>
+          <div class="input-section" style="margin-top:12px">
+            <label>Example content inside container</label>
+            <textarea placeholder="Container constrains all content to 800px max width" style="width:100%;background:#16213e;border:1px solid #2a2a4a;border-radius:8px;color:#eee;padding:12px;font-size:1rem;resize:vertical;min-height:40px;font-family:inherit"></textarea>
+          </div>
+        </div>
+      `;
+    },
+  },
+
   // ===== Input =====
   {
     id: 'fact-textarea',
@@ -230,6 +248,20 @@ export const stories = [
         <div style="display:flex;gap:12px;flex-wrap:wrap">
           <button class="btn btn-clear">クリア</button>
           <button class="btn btn-clear" disabled>クリア (disabled)</button>
+        </div>
+      `;
+    },
+  },
+  {
+    id: 'btn-api-test',
+    title: 'API Test Button (接続テスト)',
+    category: 'Buttons',
+    description: 'Connection test button in default and testing (disabled) states.',
+    render: (c) => {
+      c.innerHTML = `
+        <div style="display:flex;gap:12px;flex-wrap:wrap;align-items:center">
+          <button class="btn btn-test">接続テスト</button>
+          <button class="btn btn-test" disabled style="opacity:0.5;cursor:not-allowed">テスト中...</button>
         </div>
       `;
     },

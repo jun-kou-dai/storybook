@@ -48,6 +48,13 @@
   margin-top: 4px;
 }
 
+/* ===== MAIN CONTAINER ===== */
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
 /* ===== INPUT SECTION ===== */
 .input-section {
   background: var(--bg-card);
@@ -374,6 +381,14 @@
 }
 
 /* ===== OUTPUT CARDS ===== */
+.output-section {
+  display: none;
+}
+
+.output-section.active {
+  display: block;
+}
+
 .card {
   background: var(--bg-card);
   border-radius: var(--radius);
@@ -588,6 +603,15 @@
 
 .error-message.active {
   display: block;
+}
+/* ===== RESPONSIVE ===== */
+@media (max-width: 480px) {
+  .container { padding: 12px; }
+  .input-row { flex-direction: column; }
+  .button-row { flex-direction: column; }
+  .btn { min-width: auto; }
+  .flow-diagram { flex-direction: column; }
+  .flow-arrow { transform: rotate(90deg); }
 }
   </style>
 </head>
